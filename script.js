@@ -13,7 +13,7 @@ function getComputerChoice() {
    return "Scissor";
 }
 
-
+// This function takes user inputs and compares it to computer choice. This function returns appropriate strings that fit each case. E.g., if player input is rock and computer choice is scissor then we return "You Win! Rock beats Scissor."
 function playRound(playerSelection, computerSelection) {
 
 switch (true){
@@ -30,31 +30,30 @@ switch (true){
         break;
 
     case playerSelection.toLowerCase() === "rock" && computerSelection.toLowerCase()=== "paper":
-            return "You Lose! Paper beats Rock";
+            return "You Lose! Paper beats Rock.";
             break;
     
     case playerSelection.toLowerCase() === "rock" && computerSelection.toLowerCase()=== "scissor":
-            return "You Win! Scissor beats Rock";
+            return "You Win! Scissor beats Rock.";
             break;
       
     case playerSelection.toLowerCase() === "paper" && computerSelection.toLowerCase()=== "rock":
-                return "You Win! Paper beats Rock";
+                return "You Win! Paper beats Rock.";
                 break;
 
     case playerSelection.toLowerCase() === "paper" && computerSelection.toLowerCase()=== "scissor":
-            return "You Lose! Scissor beats Paper";
+            return "You Lose! Scissor beats Paper.";
             break;
     
     case playerSelection.toLowerCase() === "scissor" && computerSelection.toLowerCase()=== "paper":
-                return "You Win! Scissor beats Paper";
+                return "You Win! Scissor beats Paper.";
                 break;
 
     case playerSelection.toLowerCase() === "scissor" && computerSelection.toLowerCase()=== "rock":
-                 return "You Lose! Rock beats Scissor";
+                 return "You Lose! Rock beats Scissor.";
                  break;
         
 }
-
 }
 
 
