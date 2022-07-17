@@ -60,4 +60,54 @@ const playerSelection = prompt("Rock, Paper, or Scissor?")
 
 const computerSelection = getComputerChoice();
 
-console.log(playRound(playerSelection, computerSelection));
+
+// This function runs the game for 5 rounds and returns the winner in the end.
+
+function game(){
+
+    const tieCounter = 0;
+    const winCounter = 0;
+    const lossCounter =  0;
+
+    for (let i = 0; i < 5; i++){
+        //Message for each round.
+        playRound();
+        console.log(playRound(playerSelection, computerSelection));
+
+        console.log(`Scores:`);
+
+        console.log(`Player Score = ${winCounter}`);
+        console.log(`Computer Score = ${lossCounter}`);
+        console.log(`Ties = ${tieCounter}`);
+
+        //Calculating each rounds wins, losses, or ties.
+        if (playRound.includes("Win")){
+            winCounter++;
+        }
+
+        if (playRound.includes("Lose")){
+            lossCounter++;
+        }
+        tieCounter++;
+    }
+    // For if player wins
+    if (winCounter > lossCounter){
+        console.log(`Player Score = ${winCounter}`);
+        console.log(`Computer Score = ${lossCounter}`);
+        console.log(`Ties = ${tieCounter}`);
+        console.log("Congratulations! You Won the Game :D");
+    }
+    // For if player losses.
+    if (lossCounter > winCounter){
+        console.log(`Player Score = ${winCounter}`);
+        console.log(`Computer Score = ${lossCounter}`);
+        console.log(`Ties = ${tieCounter}`);
+        console.log("Better Luck Next Time :(");
+    }
+
+    //For if it's a tie.
+    console.log(`Player Score = ${winCounter}`);
+    console.log(`Computer Score = ${lossCounter}`);
+    console.log(`Ties = ${tieCounter}`);
+    console.log("And That's a Tie... >_<")
+}
