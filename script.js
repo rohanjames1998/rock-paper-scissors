@@ -70,12 +70,13 @@ function game(){
     let tieCounter = 0;
     let winCounter = 0;
     let lossCounter = 0;
-
+    let round = 0;
 
     for (let i = 0; i < 5; i++){
         //Message for each round.
         playerSelection = prompt("Rock, Paper, or Scissor?");
         computerSelection = getComputerChoice();
+        round++;
        
         //Calculating each rounds wins, losses, or ties.
         if (playRound(playerSelection, computerSelection).includes("Win")){
@@ -91,18 +92,21 @@ function game(){
         }
 
         // Each rounds display message
-
+        console.log(`Round = ${round}`);
         console.log(`Scores:`);
         console.log(`Player Score = ${winCounter}`);
         console.log(`Computer Score = ${lossCounter}`);
         console.log(`Ties = ${tieCounter}`);
-        console.log(playRound());
+        console.log(playRound(playerSelection, computerSelection));
+        console.log(" ");
     }
 
     //For if it's a tie.
-    if(tieCounter == 4 || 
-        tieCounter == 3 && winCounter == 1 && lossCounter == 1||
-        tieCounter == 2 && winCounter == 2 && lossCounter == 2){
+    if( tieCounter == 3 && winCounter == 1 && lossCounter == 1||
+        tieCounter == 2 && winCounter == 2 && lossCounter == 2||
+        tieCounter == 1 && winCounter == 2 && lossCounter == 2){
+
+        console.log("Final Results:");
         console.log(`Player Score = ${winCounter}`);
         console.log(`Computer Score = ${lossCounter}`);
         console.log(`Ties = ${tieCounter}`);
@@ -111,6 +115,7 @@ function game(){
 
     // For if player wins
     if (winCounter > lossCounter){
+        console.log("Final Results:");
         console.log(`Player Score = ${winCounter}`);
         console.log(`Computer Score = ${lossCounter}`);
         console.log(`Ties = ${tieCounter}`);
@@ -118,6 +123,7 @@ function game(){
     }
     // For if player losses.
     if (lossCounter > winCounter){
+        console.log("Final Results:");
         console.log(`Player Score = ${winCounter}`);
         console.log(`Computer Score = ${lossCounter}`);
         console.log(`Ties = ${tieCounter}`);
