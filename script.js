@@ -34,7 +34,7 @@ switch (true){
             break;
     
     case playerSelection.toLowerCase() === "rock" && computerSelection.toLowerCase()=== "scissor":
-            return "You Win! Scissor beats Rock.";
+            return "You Win! Rock beats Scissor.";
             break;
       
     case playerSelection.toLowerCase() === "paper" && computerSelection.toLowerCase()=== "rock":
@@ -56,7 +56,8 @@ switch (true){
 }
 }
 
+const playerSelection = prompt("Rock, Paper, or Scissor?")
 
+const computerSelection = getComputerChoice();
 
-
-
+console.log(playRound(playerSelection, computerSelection));
