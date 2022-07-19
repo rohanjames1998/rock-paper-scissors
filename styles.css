@@ -39,7 +39,7 @@ body {
 /* Scoreboard */
 .scoreboard {
   background-color: blueviolet;
-  flex: 0.2;
+  flex: 0.2 0;
   min-width: 100%;
 
   display: flex;
@@ -70,10 +70,20 @@ body {
 }
 
 /* Game buttons */
-.game-buttons {
+.button-container {
   background-color: green;
-  flex: 1;
+  flex: 1 0;
   min-width: 100%;
+
+display: flex;  
+align-items: center;
+justify-content: space-evenly;
+}
+
+.game-button{
+
+  height: 500px;
+  width: 500px;
 }
 
 /* Footer */
