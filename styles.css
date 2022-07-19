@@ -4,12 +4,57 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: sans-serif;
+}
+
 
 .container {
+    background-color: grey;
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
-    background-color: grey;
 }
 
+.head-cont {
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100%;
+    flex: 0.10;
+}
+
+.content-cont{
+    background-color: brown;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    min-width: 100%;
+    flex: 1;
+}
+
+.scoreboard{
+    background-color: blueviolet;
+    flex:0.5;
+    min-width: 100%;
+}
+
+.game-buttons{
+    background-color: green;
+    flex: 1;
+    min-width: 100%;
+
+}
+
+
+
+.footer{
+background-color:coral;
+display: flex;
+justify-content: center;
+align-items: center;
+min-width: 100%;
+flex: 0.05
+}
