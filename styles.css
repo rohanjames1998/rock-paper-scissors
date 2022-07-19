@@ -23,7 +23,7 @@ body {
   align-items: center;
   justify-content: center;
   min-width: 100%;
-  flex: 0.1;
+  flex: 0.25;
 }
 
 /* Content (scoreboard and buttons) */
@@ -38,7 +38,7 @@ body {
 
 /* Scoreboard */
 .scoreboard {
-  background-color: blueviolet;
+  background-color: white;
   flex: 0.2 0;
   min-width: 100%;
 
@@ -47,14 +47,13 @@ body {
 }
 
 .score-header{
-  background-color: crimson;
   text-align: center;
-  padding: 1%;
+  margin-top: 40px;
 }
 
-
+/* Counters */
 .counter-wrapper{
-  background-color: azure;
+  /* background-color: yellow; */
   display: flex;
   flex:1 1 auto;
   justify-content: space-evenly;
