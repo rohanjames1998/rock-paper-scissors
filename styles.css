@@ -9,16 +9,21 @@ body {
 }
 
 .container {
-  background-color: grey;
+  /* background-color: grey; */
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
+  background-image: url(./images/tumblr_mnlqd8iUE51qdje50o3_250.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* Header */
 .head-cont {
-  background-color: aqua;
+  background-color: rgba(255, 1, 1, 0.6);
+  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -27,15 +32,17 @@ body {
   flex: 0.25 0 ;
 }
 
+
+
 .head-title{
   font-weight: 1000;
   font-size: 120px;
-  text-align: center;
+  align-self: flex-end;
 }
 
 /* Content (scoreboard and buttons) */
 .content-cont {
-  background-color: brown;
+  background-color: rgba(76, 0, 255, 0.6);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -45,7 +52,7 @@ body {
 
 /* Scoreboard */
 .scoreboard {
-  background-color: white;
+  /* background-color: white; */
   flex: 0.2 0 500px;
   min-width: 100%;
 
@@ -60,7 +67,6 @@ body {
 
 /* Counters */
 .counter-wrapper{
-  /* background-color: yellow; */
   display: flex;
   flex:1 1 auto;
   justify-content: space-evenly;
@@ -81,7 +87,7 @@ body {
 
 /* Game buttons */
 .button-container {
-  background-color: green;
+  background-color: rgba(204, 15, 119, 0.6);
   flex: 1 0 500px;
   min-width: 100%;
 
