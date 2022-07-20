@@ -68,6 +68,10 @@ body {
   width: 150px;
 }
 
+.flash-box{
+  width: 400px;
+}
+
 /* Game buttons */
 .button-container {
   background-color: green;
