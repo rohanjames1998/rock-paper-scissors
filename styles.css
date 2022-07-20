@@ -53,7 +53,7 @@ body {
 /* Scoreboard */
 .scoreboard {
   /* background-color: white; */
-  flex: 0.2 0 500px;
+  flex: 0.2 0 300px;
   min-width: 100%;
 
   display: flex;
