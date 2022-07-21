@@ -12,68 +12,69 @@ function getComputerChoice() {
   return "Scissor";
 }
 
+
+// Function for player input.
+
+let getPlayerChoice = function(selection) {
+  return selection;
+};
+
+
+//Getting input from .game button.
+
+const button = document.querySelectorAll(".game-button");
+button.forEach(item => addEventListener("click", (e) => {
+  let selection = e.target.value;
+  getPlayerChoice(selection);
+}));
+
+
+
+
+
 // This function takes user inputs and compares it to computer choice. This function returns appropriate strings that fit each case. E.g., if player input is rock and computer choice is scissor then we return "You Win! Rock beats Scissor." Helper function.
 function playRound(playerSelection, computerSelection) {
   switch (true) {
-    case playerSelection.toLowerCase() == "rock" &&
-      computerSelection.toLowerCase() == "rock":
-      return "It's a Tie!!";
-      break;
+    case playerSelection == computerSelection:
 
-    case playerSelection.toLowerCase() == "paper" &&
-      computerSelection.toLowerCase() == "paper":
-      return "It's a Tie!!";
-      break;
+      return "It's a Tie >_<"
 
-    case playerSelection.toLowerCase() == "scissor" &&
-      computerSelection.toLowerCase() == "scissor":
-      return "It's a Tie!!";
-      break;
+    case playerSelection == "rock" && computerSelection == "paper":
 
-    case playerSelection.toLowerCase() == "rock" &&
-      computerSelection.toLowerCase() == "paper":
       return "You Lose! Paper beats Rock.";
       break;
 
-    case playerSelection.toLowerCase() == "rock" &&
-      computerSelection.toLowerCase() == "scissor":
+    case playerSelection == "rock" && computerSelection == "scissor":
+
       return "You Win! Rock beats Scissor.";
       break;
 
-    case playerSelection.toLowerCase() == "paper" &&
-      computerSelection.toLowerCase() == "rock":
+    case playerSelection == "paper" && computerSelection == "rock":
+
       return "You Win! Paper beats Rock.";
       break;
 
-    case playerSelection.toLowerCase() == "paper" &&
-      computerSelection.toLowerCase() == "scissor":
+    case playerSelection == "paper" && computerSelection == "scissor":
+
       return "You Lose! Scissor beats Paper.";
       break;
 
-    case playerSelection.toLowerCase() == "scissor" &&
-      computerSelection.toLowerCase() == "paper":
+    case playerSelection == "scissor" && computerSelection == "paper":
+
       return "You Win! Scissor beats Paper.";
       break;
 
-    case playerSelection.toLowerCase() == "scissor" &&
-      computerSelection.toLowerCase() == "rock":
+    case playerSelection == "scissor" && computerSelection == "rock":
+
       return "You Lose! Rock beats Scissor.";
       break;
   }
 }
 
-
-//Getting input from .game button.
-const button = document.querySelectorAll(".game-button").forEach(item =>{
-  item.addEventListener("click", e =>
-  e.target.value);
-})
 // This function runs the game for 5 rounds and returns the winner in the end.
 function game() {
-    // ENABLE AFTER MAKING GUI.
-  // let playerSelection = prompt("Rock, Paper, or Scissor?");  
   let computerSelection = getComputerChoice();
-
+  let playerSelection = getPlayerChoice();
   let tieCounter = 0;
   let winCounter = 0;
   let lossCounter = 0;
@@ -81,22 +82,18 @@ function game() {
 
   for (let i = 0; i < 5; i++) {
     //Message for each round.
-
-    // ENABLE AFTER MAKING
-    // playerSelection = prompt("Rock, Paper, or Scissor?");
-    computerSelection = getComputerChoice();
     round++;
 
     //Calculating each rounds wins, losses, or ties.
-    if (playRound(playerSelection, computerSelection).includes("Win")) {
+    if (playRound(playerSelection, computerSelection).includes == "Win") {
       winCounter++;
     }
 
-    if (playRound(playerSelection, computerSelection).includes("Lose")) {
+    if (playRound(playerSelection, computerSelection).includes == "Lose") {
       lossCounter++;
     }
 
-    if (playRound(playerSelection, computerSelection).includes("Tie")) {
+    if (playRound(playerSelection, computerSelection).includes == "Tie") {
       tieCounter++;
     }
 
@@ -106,7 +103,7 @@ function game() {
     console.log(`Player Score = ${winCounter}`);
     console.log(`Computer Score = ${lossCounter}`);
     console.log(`Ties = ${tieCounter}`);
-    console.log(playRound(playerSelection, computerSelection));
+    console.log(playRound());
     console.log(" ");
   }
 
@@ -141,6 +138,3 @@ function game() {
   }
 }
 
-
-
-game();
