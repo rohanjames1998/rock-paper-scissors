@@ -11,8 +11,11 @@ function getComputerChoice() {
     return "Scissor";
   }
 
+  const buttons = document.querySelectorAll(".game-button");
+  buttons.forEach(item => addEventListener("click", e => {
+    const selection = e.target.value;
+    selectionMade(selection);
+}));
 
 
-  function getPlayerChoice() {
-    
-  }
+
