@@ -62,8 +62,13 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
-// This function runs the game for 5 rounds and returns the winner in the end.
 
+//Getting input from .game button.
+const button = document.querySelectorAll(".game-button").forEach(item =>{
+  item.addEventListener("click", e =>
+  e.target.value);
+})
+// This function runs the game for 5 rounds and returns the winner in the end.
 function game() {
     // ENABLE AFTER MAKING GUI.
   // let playerSelection = prompt("Rock, Paper, or Scissor?");  
@@ -135,5 +140,7 @@ function game() {
     console.log("Better Luck Next Time :(");
   }
 }
+
+
 
 game();
