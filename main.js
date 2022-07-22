@@ -38,14 +38,14 @@ function game(selection) {
 
     case playerSelection == "rock" && computerSelection == "paper":
        displayMsg.textContent = "You Lose! Paper beats Rock.";
-  round();
+        round();
 
 
       break;
 
     case playerSelection == "rock" && computerSelection == "scissor":
        displayMsg.textContent = "You Win! Rock beats Scissor.";
-  round();
+        round();
 
        
 
@@ -53,22 +53,22 @@ function game(selection) {
 
     case playerSelection == "paper" && computerSelection == "rock":
        displayMsg.textContent = "You Win! Paper beats Rock.";
-
+       round();
       break;
 
     case playerSelection == "paper" && computerSelection == "scissor":
        displayMsg.textContent = "You Lose! Scissor beats Paper.";
-
+       round();
       break;
 
     case playerSelection == "scissor" && computerSelection == "paper":
        displayMsg.textContent = "You Win! Scissor beats Paper.";       
-
+       round();
       break;
 
     case playerSelection == "scissor" && computerSelection == "rock":
        displayMsg.textContent = "You Lose! Rock beats Scissor.";       
-
+       round();
       break;
 
       
@@ -96,7 +96,9 @@ function round() {
     computerScore.textContent++;
   }
   
-
+ if (playerScore.textContent == 5 || computerScore.textContent == 5){
+   return end();
+ }
   
 }
 
