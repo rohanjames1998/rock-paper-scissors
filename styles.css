@@ -87,10 +87,7 @@ body {
 }
 
 .counter-bx p {
-  border: solid black 3px;
-  border-top: 0;
-  border-left: 0;
-  border-right: 0;
+  border-bottom: solid black 3px;
   text-align: center;
   font-size: 24px;
   line-height: 30px;
@@ -98,6 +95,23 @@ body {
 
 .flash-box{
   width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.flash-title{
+  margin-bottom: 50px;
+}
+
+.displayMsg {
+  border: 0 !important;
+  background-color: rgba(255, 255, 255, 0);
+  font-size: 250px;
+  flex: 1;
+  
+
+  
 }
 
 /* Game buttons */

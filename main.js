@@ -85,6 +85,12 @@ function game(selection){
 
 // This function does 3 things:
   //Display all scores and messages;
-  // Count rounds and choose a winner
+  // Count rounds choose a winner;
+  // Call end function after finishing;
 
+
+function round(displayMsg, playerScore, computerScore){
+
+  
+}
 
