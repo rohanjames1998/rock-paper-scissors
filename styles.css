@@ -100,20 +100,24 @@ body {
   justify-content: center;
 }
 
-.flash-title{
+.flash-title, .player-title, .computer-title{
   margin-bottom: 50px;
 }
 
-.displayMsg {
+.displayMsg{
   border: 0 !important;
   background-color: rgba(255, 255, 255, 0);
-  font-size: 250px;
+  font-size: 36px !important;
   flex: 1;
-  
-
-  
 }
 
+.playerScore, .computerScore{
+  border: 0 !important;
+  background-color: rgba(255, 255, 255, 0);
+  font-size: 100px !important;
+  margin-top: 65px;
+  
+}
 /* Game buttons */
 .button-container {
   background-color: rgba(204, 15, 119, 0.6);
