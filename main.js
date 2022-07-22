@@ -82,6 +82,8 @@ function game(selection) {
 
 function round() {
 
+  let endMessage = "";
+
   let playerScore = document.querySelector(".playerScore");
   let computerScore = document.querySelector(".computerScore");
   let displayMsg = document.querySelector(".displayMsg");
@@ -97,14 +99,45 @@ function round() {
   }
   
  if (playerScore.textContent == 5 || computerScore.textContent == 5){
-   return end();
+  if (playerScore.textContent == 5){
+    endMessage = "Congratulations You Have Won The Game!!"
+  }
+  if(computerScore.textContent == 5){
+    endMessage = "Better Luck Next Time :("
+  }
+   return end(endMessage);
  }
   
 }
 
 
+// Creates a translucent end screen that player can click in order to replay.
+  
+function end(endMessage) {
 
 
-function end() {
-  console.log("End");
+  let body = document.getElementsByTagName("body")[0];
+ 
+
+  // Creating end screen nodes
+  let endScreen = document.createElement("div");
+  let endMsg = document.createElement("p");
+  let refreshBtn = document.createElement("button");
+
+  //Adding appropriate text to end message.
+  endMsg.textContent = endMessage;
+
+
+  // Adding classes to end screen nodes.
+  endScreen.classList.add("end-screen");
+  endMsg.classList.add("end-msg");
+  refreshBtn.classList.add("refresh-button");
+  refreshBtn.textContent = "Play Again";
+  refreshBtn.addEventListener("click", (e) => window.location.reload())
+
+  //Appending each node to their parent.
+  body.appendChild(endScreen);
+  endScreen.appendChild(endMsg);
+  endScreen.appendChild(refreshBtn);
+  return;
 }
